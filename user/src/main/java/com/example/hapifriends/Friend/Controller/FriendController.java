@@ -15,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path="/friends")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class FriendController {
     @Autowired
     private UserRepository userRepository;
