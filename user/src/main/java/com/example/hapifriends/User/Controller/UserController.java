@@ -34,6 +34,13 @@ public class UserController {
         return ResponseEntity.ok().body(user);
     }
 
+    @GetMapping("/pseudo/{pseudo}")
+    public ResponseEntity<User> getUserByPseudo(@PathVariable String pseudo) throws ResourceNotFoundException
+    {
+        User user = userRepository.findByPseudo(pseudo);
+        return ResponseEntity.ok().body(user);
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser (@PathVariable int id) throws ResourceNotFoundException {
         User user = userRepository.findById(id)

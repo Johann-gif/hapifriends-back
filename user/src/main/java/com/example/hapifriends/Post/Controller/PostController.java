@@ -2,6 +2,7 @@ package com.example.hapifriends.Post.Controller;
 
 import com.example.hapifriends.Post.Entity.Post;
 import com.example.hapifriends.Post.Repository.PostRepository;
+import com.example.hapifriends.User.Entity.User;
 import com.example.hapifriends.User.Repository.UserRepository;
 import org.apache.velocity.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpStatus;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/posts")
@@ -31,6 +33,13 @@ public class PostController {
                 .orElseThrow(() -> new ResourceNotFoundException("Post not found :: " + id));
 
         return ResponseEntity.ok().body(post);
+    }
+
+    @GetMapping("/owner/{id}")
+    public List<Post> getOwnerPost(@PathVariable int id) throws ResourceNotFoundException
+    {
+        User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User not found :: " + id));
+        return postRepository.findAllByAuthor(user);
     }
 
     @PostMapping("/add")
