@@ -1,0 +1,22 @@
+server.port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: postModule
+          uri: http://localhost:9020/
+          predicates:
+            - Path=/posts/**
+        - id: userModule
+          uri: http://localhost:9010/
+          predicates:
+            - Path=/users/**
+
+  application:
+    name: gateway-app
+  boot:
+    admin:
+      url: http://localhost:9000
+
+management.endpoints.web.exposure.include: health
