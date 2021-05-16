@@ -12,16 +12,17 @@ Les membres du groupe sont les suivants :
 - Gianni Giudice
 - Gautier Couture
 
-## Lancement
+## Lancement du docker côté back
 
-Pour lancer le back il faut tout d'abord se placer à la racine du projet puis récupérer les images de nos services :
+A la racine du projet, lancer :
 ```
 $ docker pull -a skinkan/hapifriends-back
-```
-Puis lancer le Container Docker :
-```
 $ docker-compose up
 ```
+Les différents services du projet côté back sont disponibles aux ports suivants :
+- Admin au port 9000
+- User au port 9010
+- Gateway au port 8080
 
 ## Fonctionnalités
 
