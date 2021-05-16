@@ -7,8 +7,11 @@ spring:
         - id: userModule
           uri: http://localhost:9010/
           predicates:
-            - Path=/users/**
-
+            - Path=/
+    config:
+          server:
+            git:
+              uri: http://localhost:9009/
   application:
     name: gateway-app
   boot:
