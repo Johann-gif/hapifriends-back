@@ -141,8 +141,9 @@ Le fichier postman est à la racine du projet et a pour nom **hapifriends.postma
 
 ### Microservices
 
-Nous avons implementé plusieurs microservices. Certains ne fonctionnent pas très bien.
--Gateway: il vise à fournir un moyen simple mais efficace d'acheminer vers les API et de leur fournir des préoccupations transversales telles que: la sécurité, la surveillance / métriques et la résilience. Pour y accéder, veuillez lancer http://localhost:8080/
--Admin: il est utilisé pour gérer et surveiller les applications Spring Boot. Chaque application est considérée comme un client et s'enregistre sur le serveur d'administration. Pour y accéder, veuillez lancer http://localhost:9000/
--Config: fournit une prise en charge côté serveur et côté client pour la configuration externalisée dans un système distribué. Pour y accéder, veuillez lancer http://localhost:9009/
--User: il contient toutes nos informations sur nos utilisateurs. Pour y accéder, veuillez lancer http://localhost:9010/
+Nous avons implementé plusieurs microservices. Certains ne fonctionnent pas très bien. 
+
+- Gateway: il vise à fournir un moyen simple mais efficace d'acheminer vers les API et de leur fournir des préoccupations transversales telles que: la sécurité, la surveillance / métriques et la résilience. Pour y accéder, veuillez lancer http://localhost:8080/
+- Admin: il est utilisé pour gérer et surveiller les applications Spring Boot. Chaque application est considérée comme un client et s'enregistre sur le serveur d'administration. Pour y accéder, veuillez lancer http://localhost:9000/
+- Config: fournit une prise en charge côté serveur et côté client pour la configuration externalisée dans un système distribué. Pour y accéder, veuillez lancer http://localhost:9009/
+- User: il contient toutes nos informations sur nos utilisateurs. Pour y accéder, veuillez lancer http://localhost:9010/
