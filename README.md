@@ -10,6 +10,18 @@ Les membres du groupe (GROUPE 1 sur le fichier Excel) sont les suivants :
 - Johann De Almeida
 - Sébastien Guidez
 - Gianni Giudice
+- Gautier Couture
+
+## Lancement
+
+Pour lancer le back il faut tout d'abord se placer à la racine du projet puis récupérer les images de nos services :
+```
+$ docker pull -a skinkan/hapifriends-back
+```
+Puis lancer le Container Docker :
+```
+$ docker-compose up
+```
 
 ## Fonctionnalités
 
@@ -77,7 +89,7 @@ Sur hapi-friends, il est possible d'effectuer les actions suivantes :
     - text
     - shared
     - user_id
-    
+
 - Supprimer un message existant en base en renseignant son id via la route **/posts/{id}** (**DELETE**)
 
 - Modifier un message existant en base en renseignant son id via la route **/posts/{id}** et en envoyant les paramètres suivants : (**PUT**)

@@ -1,17 +1,17 @@
 version: "3.9"
 services:
   user:
-    image: "hapifriends/user"
+    image: "skinkan/hapifriends-back:user"
     restart: always
     ports:
       - 9010:9010
   gateway:
-    image: "hapifriends/gateway"
+    image: "skinkan/hapifriends-back:gateway"
     restart: always
     ports:
       - 8080:8080
   admin:
-   image: "hapifriends/admin"
+   image: "skinkan/hapifriends-back:admin"
    restart: always
    ports:
      - 9000:9000
