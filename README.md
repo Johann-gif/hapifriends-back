@@ -66,6 +66,8 @@ Sur hapi-friends, il est possible d'effectuer les actions suivantes :
 
 - Afficher un utilisateur existant en base en renseignant son id via la route **/users/{id}** (**GET**)
 
+- Récupérer un utilisateur par son pseudo via la route **/users/pseudo/{pseudo}** (**GET**)
+
 - Supprimer un utilisateur existant en base en renseignant son id via la route **/users/{id}** (**DELETE**)
 
 - Modifier un utilisateur existant en base en renseignant son id via la route **/users/{id}** et en envoyant les paramètres suivants : (**PUT**)
@@ -83,6 +85,8 @@ Sur hapi-friends, il est possible d'effectuer les actions suivantes :
 - Afficher les messages existant en base via la route **/posts** (**GET**)
 
 - Afficher un message existant en base en renseignant son id via la route **/posts/{id}** (**GET**)
+
+- Afficher les messages existant pour un utilisateur donné en renseignant l'id utilisateur via la route **/posts/owner/{id}** (**GET**)
 
 - Créer un message en envoyant à la route **/add** les paramètres suivants : (**POST**)
 
