@@ -3,11 +3,19 @@ server.port: 8080
 spring:
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
       routes:
         - id: userModule
           uri: http://localhost:9010/
           predicates:
-            - Path=/users/**
+            - Path=/**
 
   application:
     name: gateway-app
