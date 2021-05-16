@@ -19,6 +19,10 @@ A la racine du projet, lancer :
 $ docker pull -a skinkan/hapifriends-back
 $ docker-compose up
 ```
+
+**/!\ ATTENTION : Il nous est arrivé d'avoir des routes indisponibles avec docker-compose up. Si jamais vous rencontrez ce problème, relancez simplement docker-compose up.**
+
+
 Les différents services du projet côté back sont disponibles aux ports suivants :
 - Admin au port 9000
 - User au port 9010
