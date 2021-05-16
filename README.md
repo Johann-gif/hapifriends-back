@@ -6,7 +6,7 @@ hAPI-friends est un projet d'API réseau social basique effectué dans le cadre 
 
 ## Membres du groupe
 
-Les membres du groupe (GROUPE 1 sur le fichier Excel) sont les suivants :
+Les membres du groupe sont les suivants :
 - Johann De Almeida
 - Sébastien Guidez
 - Gianni Giudice
