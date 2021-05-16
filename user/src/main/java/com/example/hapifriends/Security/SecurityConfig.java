@@ -39,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.oauth2ResourceServer().jwt();
-
+        http.headers().frameOptions().disable();
         http.csrf().disable().authorizeRequests()
                 .mvcMatchers("/sign-up").permitAll()
                 .mvcMatchers("/sign-up2").permitAll()
